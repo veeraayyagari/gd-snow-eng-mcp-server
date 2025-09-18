@@ -6,7 +6,7 @@ This script provides a menu to help users set up different authentication method
 for the ServiceNow MCP server.
 
 Usage:
-    python scripts/setup_auth.py
+    python tools/setup_auth.py
 """
 
 import os

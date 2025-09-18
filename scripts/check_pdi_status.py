@@ -9,7 +9,7 @@ It will:
 3. Provide guidance on waking up a hibernating instance
 
 Usage:
-    python scripts/check_pdi_status.py
+    python tools/check_pdi_status.py
 """
 
 import os

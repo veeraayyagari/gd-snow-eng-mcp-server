@@ -8,7 +8,7 @@ It will:
 2. Update the .env file with the API key configuration
 
 Usage:
-    python scripts/setup_api_key.py
+    python tools/setup_api_key.py
 """
 
 import os
@@ -79,7 +79,7 @@ def setup_api_key():
                 
                 print("✅ Updated .env file with API key configuration!")
                 print("\nYou can now use API key authentication with the ServiceNow MCP server.")
-                print("To test it, run: python scripts/test_connection.py")
+                print("To test it, run: python tools/test_connection.py")
             
             return True
         else:

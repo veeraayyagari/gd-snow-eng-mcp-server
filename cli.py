@@ -11,8 +11,8 @@ import anyio
 from dotenv import load_dotenv
 from mcp.server.stdio import stdio_server
 
-from servicenow_mcp.server import ServiceNowMCP
-from servicenow_mcp.utils.config import (
+from gd_servicenow_api.server import ServiceNowMCP
+from gd_servicenow_api.utils.config import (
     ApiKeyConfig,
     AuthConfig,
     AuthType,

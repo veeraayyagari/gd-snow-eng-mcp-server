@@ -9,7 +9,7 @@ It will:
 3. Update the .env file with the OAuth configuration
 
 Usage:
-    python scripts/setup_oauth.py
+    python tools/setup_oauth.py
 """
 
 import os
@@ -175,7 +175,7 @@ def setup_oauth():
 
                 print("✅ Updated .env file with OAuth configuration!")
                 print("\nYou can now use OAuth authentication with the ServiceNow MCP server.")
-                print("To test it, run: python scripts/test_connection.py")
+                print("To test it, run: python tools/test_connection.py")
             
             return True
         else:

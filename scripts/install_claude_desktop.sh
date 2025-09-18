@@ -25,7 +25,7 @@ cat > "$CONFIG_FILE" << EOL
       "command": "$CURRENT_DIR/.venv/bin/python",
       "args": [
         "-m",
-        "servicenow_mcp.cli"
+        "gd_servicenow_api.cli"
       ],
       "env": {
         "SERVICENOW_INSTANCE_URL": "$(grep SERVICENOW_INSTANCE_URL .env | cut -d '=' -f2)",

@@ -9,7 +9,7 @@ It will:
 3. Provide guidance on finding the correct credentials
 
 Usage:
-    python scripts/check_pdi_info.py
+    python tools/check_pdi_info.py
 """
 
 import os

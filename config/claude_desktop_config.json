@@ -4,7 +4,7 @@
       "command": "python3",
       "args": [
         "-m",
-        "servicenow_mcp.cli"
+        "gd_servicenow_api.cli"
       ],
       "env": {
         "SERVICENOW_INSTANCE_URL": "https://godaddydev2.service-now.com",

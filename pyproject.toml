@@ -1,0 +1,14 @@
+[project]
+name = "gd-snow-mcp-server"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "mcp[cli]>=1.14.0",
+]
+
+[tool.uv.workspace]
+members = [
+    "gd-snow-mcp-server",
+]

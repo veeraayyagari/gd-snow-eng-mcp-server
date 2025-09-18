@@ -9,7 +9,7 @@ provided in the .env file. It supports all authentication methods:
 - API key authentication
 
 Usage:
-    python scripts/test_connection.py
+    python tools/test_connection.py
 """
 
 import os
@@ -143,7 +143,7 @@ def test_connection():
         if not client_id or not client_secret or client_id == "your-client-id" or client_secret == "your-client-secret":
             print("Error: Client ID or Client Secret is not set or is using the default value.")
             print("Please update the SERVICENOW_CLIENT_ID and SERVICENOW_CLIENT_SECRET in your .env file.")
-            print("You can run scripts/setup_oauth.py to set up OAuth authentication.")
+            print("You can run tools/setup_oauth.py to set up OAuth authentication.")
             sys.exit(1)
             
         print("Using OAuth authentication (client ID/client secret)")
@@ -162,7 +162,7 @@ def test_connection():
         if not api_key or api_key == "your-api-key":
             print("Error: API key is not set or is using the default value.")
             print("Please update the SERVICENOW_API_KEY in your .env file.")
-            print("You can run scripts/setup_api_key.py to set up API key authentication.")
+            print("You can run tools/setup_api_key.py to set up API key authentication.")
             sys.exit(1)
             
         print(f"Using API key authentication (header: {api_key_header})")

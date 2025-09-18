@@ -11,15 +11,14 @@ from typing import Dict, Union
 import uvicorn
 from dotenv import load_dotenv
 from mcp.server import Server
-from mcp.server.fastmcp import FastMCP
 from mcp.server.sse import SseServerTransport
 from starlette.applications import Starlette
 from starlette.requests import Request
 from starlette.routing import Mount, Route
 
 import src
-from src.servicenow_mcp.server import ServiceNowMCP
-from src.servicenow_mcp.utils.config import AuthConfig, AuthType, BasicAuthConfig, ServerConfig
+from src.gd_servicenow_api.server import ServiceNowMCP
+from src.gd_servicenow_api.utils.config import AuthConfig, AuthType, BasicAuthConfig, ServerConfig
 
 
 def create_starlette_app(mcp_server: Server, *, debug: bool = False) -> Starlette:
@@ -79,7 +78,7 @@ class ServiceNowSSEMCP(ServiceNowMCP):
         uvicorn.run(starlette_app, host=host, port=port)
 
 
-def create_servicenow_mcp(instance_url: str, username: str, password: str):
+def create_gd_servicenow_api(instance_url: str, username: str, password: str):
     """
     Create a ServiceNow MCP server with minimal configuration.
 
@@ -96,10 +95,10 @@ def create_servicenow_mcp(instance_url: str, username: str, password: str):
 
     Example:
         ```python
-        from servicenow_mcp.server import create_servicenow_mcp
+        from gd_servicenow_api.server import create_gd_servicenow_api
 
         # Create an MCP server for ServiceNow
-        mcp = create_servicenow_mcp(
+        mcp = create_gd_servicenow_api(
             instance_url="https://instance.service-now.com",
             username="admin",
             password="password"
@@ -131,7 +130,7 @@ def main():
     parser.add_argument("--port", type=int, default=8080, help="Port to listen on")
     args = parser.parse_args()
 
-    server = create_servicenow_mcp(
+    server = create_gd_servicenow_api(
         instance_url=os.getenv("https://godaddydev2.service-now.com"),
         username=os.getenv("vayyagari"),
         password=os.getenv("India@123"),
