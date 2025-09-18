@@ -13,15 +13,10 @@ import mcp.types as types
 import yaml
 from mcp.server.lowlevel import Server
 from pydantic import ValidationError
-from src.servicenow_mcp.auth.auth_manager import AuthManager
-from src.servicenow_mcp.tools.knowledge_base import (
-    create_category as create_kb_category_tool,
-)
-from src.servicenow_mcp.tools.knowledge_base import (
-    list_categories as list_kb_categories_tool,
-)
-from src.servicenow_mcp.utils.config import ServerConfig
-from src.servicenow_mcp.utils.tool_utils import get_tool_definitions
+from auth import AuthManager
+
+from utils import config
+from utils import tool_utils
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)

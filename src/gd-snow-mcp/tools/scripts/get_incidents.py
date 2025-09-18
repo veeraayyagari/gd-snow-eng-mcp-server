@@ -9,5 +9,5 @@ def get_recent_incidents(instance_url, username, password):
         print(f"Error fetching incidents: {response.text}")
         return []
 
-recent_incidents = get_recent_incidents('https://godaddydev2.service-now.com','mcp-server', 'mcp-server')
+recent_incidents = get_recent_incidents('https://godaddydev2.service-now.com','mcp_server', 'mcp_server')
 print(recent_incidents)
