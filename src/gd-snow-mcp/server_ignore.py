@@ -15,9 +15,6 @@ from mcp.server.lowlevel import Server
 from pydantic import ValidationError
 from auth import AuthManager
 
-from utils import config
-from utils import tool_utils
-
 # Set up logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
